@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CULTREBOAT - DESIGN PR SOCIAL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <canvas id="waterCanvas"></canvas>
+
+    <div class="container">
+      <header class="header">
+        <div class="header-left">
+          <div class="logo">CULTREBOAT</div>
+          <!-- <div class="nav-icons">
+            <span>⚓</span>
+            <span>🔍</span>
+            <span>📱</span>
+          </div> -->
+        </div>
+        <div class="menu-icon">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </div>
+      </header>
+
+      <!-- Rolling Text Wheel -->
+      <div class="text-wheel-container">
+        <div class="text-wheel" id="textWheel">
+          <div class="text-item">DESIGN</div>
+          <div class="text-item">PR</div>
+          <div class="text-item">SOCIAL</div>
+        </div>
+      </div>
+
+      <!-- Two Column Images -->
+      <div class="image-grid">
+        <!-- Left Column - Moves UP -->
+        <div class="image-column column-left" id="leftColumn">
+          <div class="image-box img-left-1">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              style="width: 100%; height: 100%; object-fit: cover "
+            >
+              <source src="./data/Untitled design (1).mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="image-box img-left-2">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              style="width: 100%; height: 100%; object-fit: cover"
+            >
+              <source src="./data/Untitled design (1) copy.mp4" type="video/mp4" />
+            </video>
+          </div>
+         
+           <div class="image-box img-left-3">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              style="width: 100%; height: 100%; object-fit: cover"
+            >
+              <source src="./data/Untitled design (3).mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="image-box img-left-4">
+            <img
+              src="./data/reel1.mp4"
+              alt="Technology"
+            />
+          </div>
+        </div>
+
+        <!-- Right Column - Moves DOWN -->
+        <div class="image-column column-right" id="rightColumn">
+          <div class="image-box img-right-1">
+            <img
+              src="./data/Screenshot_20250528_004411_Instagram.jpg"
+              alt="Gental "
+            />
+          </div>
+          <div class="image-box img-right-2">
+            <img
+              src="./data/Screenshot_20250528_004122_Instagram.jpg"
+              alt="Portrait"
+            />
+          </div>
+          <div class="image-box img-right-3">
+            <img
+              src="./data/Screenshot_20250528_004002_Instagram.jpg"
+              alt="Office Space"
+            />
+          </div>
+          <div class="image-box img-right-4">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Business Meeting"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div>SCROLL AND EXPLORE</div>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

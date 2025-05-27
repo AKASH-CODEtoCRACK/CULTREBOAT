@@ -1,0 +1,274 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: white;
+            overflow-x: hidden;
+            height: 400vh;
+            cursor: none;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 400vh;
+            overflow: hidden;
+        }
+
+        /* Water Effect Canvas */
+        #waterCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            opacity: 2;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(8, 59, 198, 0.8) 0%, rgba(15, 153, 184, 0.2) 70%, transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 8px;
+        }
+
+        /* .nav-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        } */
+
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: none;
+        }
+
+        .menu-line {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+
+        /* Rolling Text Wheel */
+        .text-wheel-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 500;
+            width: 600px;
+            height: 200px;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .text-wheel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .text-item {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            font-weight: 300;
+            letter-spacing: 20px;
+            backface-visibility: hidden;
+            transform-origin: center center;
+        }
+
+        .text-item:nth-child(1) {
+            transform: rotateX(0deg) translateZ(100px);
+        }
+
+        .text-item:nth-child(2) {
+            transform: rotateX(120deg) translateZ(100px);
+        }
+
+        .text-item:nth-child(3) {
+            transform: rotateX(240deg) translateZ(100px);
+        }
+
+        /* Two Column Images */
+        .image-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .image-column {
+            position: absolute;
+            top: 0;
+            height: 150vh;
+            width: 300px;
+        }
+
+        .column-left {
+            left: 15%;
+        }
+
+        .column-right {
+            right: 15%;
+        }
+
+        .image-box {
+            position: absolute;
+            border-radius: 12px;
+            overflow: hidden;
+            will-change: transform;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: transform 0.1s ease-out;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Left column images */
+        .img-left-1 {
+            width: 280px;
+            height: 350px;
+            top: 0%;
+        }
+
+        .img-left-2 {
+            width: 240px;
+            height: 300px;
+            top: 40%;
+            left: 30px;
+        }
+
+        .img-left-3 {
+            width: 260px;
+            height: 320px;
+            top: 80%;
+        }
+
+        .img-left-4 {
+            width: 220px;
+            height: 280px;
+            top: 120%;
+            left: 40px;
+        }
+
+        /* Right column images */
+        .img-right-1 {
+            width: 300px;
+            height: 200px;
+            top: 10%;
+        }
+
+        .img-right-2 {
+            width: 250px;
+            height: 350px;
+            top: 35%;
+            right: 30px;
+        }
+
+        .img-right-3 {
+            width: 280px;
+            height: 240px;
+            top: 75%;
+        }
+
+        .img-right-4 {
+            width: 240px;
+            height: 300px;
+            top: 110%;
+            right: 40px;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 600;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 3px;
+            opacity: 0.7;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background-color: white;
+            margin: 10px auto;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .text-item {
+                font-size: 60px;
+                letter-spacing: 10px;
+            }
+            
+            .text-wheel-container {
+                width: 400px;
+                height: 150px;
+            }
+            
+            .image-column {
+                width: 200px;
+            }
+            
+            .image-box {
+                transform: scale(0.8);
+            }
+        }
